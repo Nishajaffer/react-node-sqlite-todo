@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap");
+
+:root {
+  font-family: "DM Sans", sans-serif;
+  color: #202938;
+  background: #f3f6fb;
+  font-synthesis: none;
+}
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; min-height: 100vh; }
+button, input { font: inherit; }
+.page {
+  min-height: 100vh; display: flex; flex-direction: column;
+  align-items: center; justify-content: center; padding: 32px 16px;
+}
+.todo-card {
+  width: min(100%, 680px); background: white; border: 1px solid #e6eaf0;
+  border-radius: 22px; padding: 34px; box-shadow: 0 18px 55px #26365312;
+}
+.header { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; }
+.eyebrow { color: #6578c8; font-size: 11px; font-weight: 700; letter-spacing: 2px; margin: 0 0 8px; }
+h1 { font: 800 30px "Manrope", sans-serif; margin: 0; letter-spacing: -1px; }
+.subtitle { color: #7c8798; margin: 7px 0 0; font-size: 14px; }
+.count-badge { background: #eef1ff; color: #596bc0; padding: 9px 13px; border-radius: 30px; font-size: 12px; font-weight: 700; white-space: nowrap; }
+.add-form { display: flex; gap: 10px; margin: 28px 0 18px; }
+.add-form input, .edit-form input {
+  min-width: 0; flex: 1; border: 1px solid #dfe4ec; border-radius: 10px;
+  padding: 13px 14px; outline: none; color: #202938;
+}
+.add-form input:focus, .edit-form input:focus { border-color: #7182dc; box-shadow: 0 0 0 3px #7182dc20; }
+.add-form button {
+  border: 0; border-radius: 10px; padding: 0 20px; color: white;
+  background: #596bc0; font-weight: 700; cursor: pointer;
+}
+.add-form button:hover { background: #4859ac; }
+.error { background: #fff0f0; color: #b42318; padding: 10px 12px; border-radius: 8px; font-size: 13px; }
+.filters { display: flex; gap: 7px; border-bottom: 1px solid #edf0f4; padding-bottom: 15px; }
+.filter { border: 0; background: transparent; color: #7c8798; padding: 7px 12px; border-radius: 8px; cursor: pointer; font-size: 13px; }
+.active-filter { color: #4e60b5; background: #eef1ff; font-weight: 700; }
+.todo-list { list-style: none; margin: 0; padding: 0; }
+.todo-item { display: flex; align-items: center; gap: 12px; min-height: 64px; border-bottom: 1px solid #f0f2f5; }
+.check { width: 17px; height: 17px; accent-color: #596bc0; cursor: pointer; }
+.todo-title { flex: 1; font-size: 14px; overflow-wrap: anywhere; }
+.completed { color: #a0a8b5; text-decoration: line-through; }
+.actions { display: flex; gap: 5px; }
+.icon-button, .small-button { border: 0; background: #f3f5f9; color: #687386; border-radius: 7px; padding: 7px 9px; cursor: pointer; font-size: 11px; font-weight: 600; }
+.icon-button:hover, .small-button:hover { background: #e8ecf4; }
+.delete { color: #c14f55; }
+.edit-form { display: flex; flex: 1; gap: 6px; align-items: center; }
+.edit-form input { padding: 8px 10px; }
+.save { color: #4054aa; }
+.empty { text-align: center; color: #8b95a5; padding: 42px 10px; font-size: 14px; }
+.empty-icon { display: inline-grid; place-items: center; width: 38px; height: 38px; border-radius: 50%; background: #eef1ff; color: #596bc0; font-size: 20px; }
+.footer { color: #929baa; font-size: 12px; padding-top: 18px; }
+.credit { color: #9aa3b1; font-size: 12px; margin-top: 18px; }
+@media (max-width: 520px) {
+  .todo-card { padding: 23px 18px; }
+  h1 { font-size: 25px; }
+  .header { flex-direction: column; }
+  .add-form { flex-direction: column; }
+  .add-form button { min-height: 44px; }
+  .todo-item { gap: 8px; }
+  .icon-button { padding: 7px; }
+}
